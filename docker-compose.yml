@@ -1,0 +1,9 @@
+services:
+  rc2-daemon:
+    container_name: rc2-daemon
+    ports:
+      - "8801:8801"
+    image: "w9cxr/rc2-daemon:latest"
+    restart: unless-stopped
+    volumes:
+      - ./config:/config
